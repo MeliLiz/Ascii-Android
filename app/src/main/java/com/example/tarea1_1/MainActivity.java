@@ -1,12 +1,17 @@
 package com.example.tarea1_1;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.material.snackbar.Snackbar;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,10 +30,19 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Cargar y mostrar el ASCII art
+        // Load and show the ascii
         TextView asciiArtTextView = findViewById(R.id.ascii_art_text_view);
         String asciiArt = loadAsciiArt();
         asciiArtTextView.setText(asciiArt);
+
+        Button myButton = findViewById(R.id.button);
+        myButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "The animal shown is a deer!!", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
     }
 
     private String loadAsciiArt() {
@@ -44,4 +58,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return asciiArt.toString();
     }
+
+
 }
