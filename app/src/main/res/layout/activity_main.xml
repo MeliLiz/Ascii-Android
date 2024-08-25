@@ -8,7 +8,6 @@
     tools:context=".MainActivity">
 
 
-
     <TextView
         android:id="@+id/ascii_art_text_view"
         android:layout_width="wrap_content"
@@ -17,8 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:padding="16dp"
-        android:textSize="20sp"
+        android:padding="10dp"
+        android:textSize="27sp"
         android:typeface="monospace"
         tools:layout_editor_absoluteX="189dp"
         tools:layout_editor_absoluteY="274dp" />

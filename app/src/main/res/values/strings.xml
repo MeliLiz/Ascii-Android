@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Tarea1_1</string>
     <string name="title">Hello Ascii</string>
-    <string name="button1_text">Click</string>
+    <string name="button1_text">What animal is it?</string>
 </resources>
